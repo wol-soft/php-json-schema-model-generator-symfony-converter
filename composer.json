@@ -16,7 +16,8 @@
 
         "wol-soft/php-json-schema-model-generator-production": "^0.6.0",
 
-        "php": ">=7.2"
+        "php": ">=7.2",
+        "ext-json": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.5"

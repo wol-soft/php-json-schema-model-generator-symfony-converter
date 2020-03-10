@@ -32,7 +32,7 @@ class JSONModelConverter implements ParamConverterInterface
         try {
             $request->attributes->set(
                 $configuration->getName(),
-                new $requestModelClass(json_decode($request->getContent()), true)
+                new $requestModelClass(json_decode($request->getContent(), true) ?? [], true)
             );
         } catch (JSONModelValidationException $exception) {
             throw new InvalidArgumentException($exception->getMessage(), 0, $exception);
@@ -48,6 +48,6 @@ class JSONModelConverter implements ParamConverterInterface
      */
     public function supports(ParamConverter $configuration)
     {
-        return $configuration->getClass() instanceof JSONModelInterface;
+        return is_a($configuration->getClass(), JSONModelInterface::class, true);
     }
 }
