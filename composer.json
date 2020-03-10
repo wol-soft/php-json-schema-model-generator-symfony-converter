@@ -1,0 +1,34 @@
+{
+    "name": "wol-soft/php-json-schema-model-generator-symfony-converter",
+    "homepage": "https://github.com/wol-soft/php-json-schema-model-generator-symfony-converter",
+    "description": "Provides a symfony converter for models generated with the wol-soft/php-json-schema-model-generator library",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Enno Woortmann",
+            "email": "enno.woortmann@web.de"
+        }
+    ],
+    "require": {
+        "symfony/http-kernel": "^5.0",
+        "sensio/framework-extra-bundle": "^5.5",
+
+        "wol-soft/php-json-schema-model-generator-production": "^0.5.0",
+
+        "php": ">=7.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "PHPModelGenerator\\Bundle\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PHPModelGenerator\\Bundle\\Tests\\": "tests"
+        }
+    }
+}

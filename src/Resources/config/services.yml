@@ -1,0 +1,5 @@
+services:
+  json_model_converter:
+    class: PHPModelGenerator\Bundle\ParamConverter\JSONModelConverter
+    tags:
+      - { name: request.param_converter, priority: -2, converter: json_model_converter }
