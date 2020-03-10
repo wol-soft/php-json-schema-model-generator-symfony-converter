@@ -14,7 +14,7 @@
         "symfony/http-kernel": "^5.0",
         "sensio/framework-extra-bundle": "^5.5",
 
-        "wol-soft/php-json-schema-model-generator-production": "^0.5.0",
+        "wol-soft/php-json-schema-model-generator-production": "^0.6.0",
 
         "php": ">=7.2"
     },
