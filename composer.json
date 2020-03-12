@@ -11,8 +11,8 @@
         }
     ],
     "require": {
-        "symfony/http-kernel": "^3.0|^4.0|^5.0",
-        "sensio/framework-extra-bundle": "^3.0|^4.0|^5.0",
+        "symfony/http-kernel": "~4.4|~5.0",
+        "sensio/framework-extra-bundle": "~4.4|~5.0",
 
         "wol-soft/php-json-schema-model-generator-production": "^0.6.0",
 
@@ -23,8 +23,8 @@
         "wol-soft/php-json-schema-model-generator": "^0.11.1",
 
         "phpunit/phpunit": "^8.5",
-        "symfony/browser-kit": "^3.0|^4.0|^5.0",
-        "symfony/error-handler": "^3.0|^4.0|^5.0"
+        "symfony/browser-kit": "~4.4|~5.0",
+        "symfony/error-handler": "~4.4|~5.0"
     },
     "autoload": {
         "psr-4": {
