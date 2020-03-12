@@ -1,0 +1,27 @@
+framework:
+  test: true
+  session:
+    storage_id: session.storage.mock_file
+  router:
+    resource: "%kernel.project_dir%/tests/routing.yml"
+
+sensio_framework_extra:
+  request:
+    converters: true
+    auto_convert: true
+
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  App\:
+    resource: 'App/*'
+
+  App\Controller\:
+    resource: 'App/Controller'
+    tags: ['controller.service_arguments']
+
+  App\Event\ExceptionListener:
+    tags:
+      - { name: kernel.event_listener, event: kernel.exception, method: onKernelException }

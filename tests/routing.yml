@@ -1,0 +1,4 @@
+phpmodel_generator_converter:
+  resource: "App/Controller/PersonController.php"
+  type:     annotation
+  prefix:   /person

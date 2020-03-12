@@ -4,7 +4,6 @@ declare(strict_types = 1);
 
 namespace PHPModelGenerator\Bundle\ParamConverter;
 
-use InvalidArgumentException;
 use PHPModelGenerator\Exception\JSONModelValidationException;
 use PHPModelGenerator\Interfaces\JSONModelInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
@@ -21,28 +20,29 @@ class JSONModelConverter implements ParamConverterInterface
     /**
      * Stores the object in the request.
      *
+     * @param Request $request
      * @param ParamConverter $configuration Contains the name, class and options of the object
      *
      * @return bool True if the object has been successfully set, else false
+     *
+     * @throws JSONModelValidationException
      */
     public function apply(Request $request, ParamConverter $configuration)
     {
         $requestModelClass = $configuration->getClass();
 
-        try {
-            $request->attributes->set(
-                $configuration->getName(),
-                new $requestModelClass(json_decode($request->getContent(), true) ?? [], true)
-            );
-        } catch (JSONModelValidationException $exception) {
-            throw new InvalidArgumentException($exception->getMessage(), 0, $exception);
-        }
+        $request->attributes->set(
+            $configuration->getName(),
+            new $requestModelClass(json_decode($request->getContent(), true) ?? [], true)
+        );
 
         return true;
     }
 
     /**
      * Checks if the object is supported.
+     *
+     * @param ParamConverter $configuration
      *
      * @return bool True if the object is supported, else false
      */
