@@ -46,7 +46,7 @@ sensio_framework_extra:
     auto_convert: true
 ```
 
-Now all you have to do is using the generated models in your controller action. The models will be instantiated automatically by utilizing the body of the request as data input. If an invalid request body is sent and the validation fails an Exception will be thrown. Register an exception listener and convert the exception into a feasible response.
+Now all you have to do is using the generated models in your controller action. The models will be instantiated automatically by utilizing the body of the request as data input. If an invalid request body is sent and the validation fails an Exception will be thrown. Register an exception listener and convert the exception into a feasible response. For a running example you can have a look into the demo application located in the tests of this library. It includes a JSON Schema (`tests\App\Schema\person.json`), the generation step (`tests\bootstrap.php`), an exception handler (`tests\App\Event\ExceptionListener.php`) and a controller utilizing the generated model (`tests\App\Controller\PersonController`).
 
 ## Tests ##
 
