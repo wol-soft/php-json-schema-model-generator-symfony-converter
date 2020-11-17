@@ -2,7 +2,7 @@
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.2-8892BF.svg)](https://php.net/)
 [![Maintainability](https://api.codeclimate.com/v1/badges/940cde6f65ed06b3de69/maintainability)](https://codeclimate.com/github/wol-soft/php-json-schema-model-generator-symfony-converter/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/940cde6f65ed06b3de69/test_coverage)](https://codeclimate.com/github/wol-soft/php-json-schema-model-generator-symfony-converter/test_coverage)
-[![Build Status](https://travis-ci.org/wol-soft/php-json-schema-model-generator-symfony-converter.svg?branch=master)](https://travis-ci.org/wol-soft/php-json-schema-model-generator-symfony-converter)
+[![Build Status](https://travis-ci.com/wol-soft/php-json-schema-model-generator-symfony-converter.svg?branch=master)](https://travis-ci.com/wol-soft/php-json-schema-model-generator-symfony-converter)
 [![Coverage Status](https://coveralls.io/repos/github/wol-soft/php-json-schema-model-generator-symfony-converter/badge.svg?branch=master)](https://coveralls.io/github/wol-soft/php-json-schema-model-generator-symfony-converter?branch=master)
 [![MIT License](https://img.shields.io/packagist/l/wol-soft/php-json-schema-model-generator-symfony-converter.svg)](https://github.com/wol-soft/php-json-schema-model-generator-symfony-converter/blob/master/LICENSE)
 
